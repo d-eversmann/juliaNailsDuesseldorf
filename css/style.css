@@ -1,0 +1,24 @@
+body {
+    background-color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #4da3ff;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+}
+.nav-content{
+    padding-left: 10%;
+}
+.nav-content a{
+    padding-left: 5%;
+}
+.title-row{
+    padding-left: 10%;
+}
