@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <nav aria-label="Hauptnavigation" class="main-nav">
         <div class="nav-container">
           <ul class="nav-content">
-            <li><a href="Studiouebersicht.html">Studioübersicht</a></li>
+            <li><a href="index.html">Studioübersicht</a></li>
             <li><a href="Preisliste.html">Preisliste</a></li>
             <li><a href="Team.html">Unser Team</a></li>
             <li><a href="Galerie.html">Galerie</a></li>
             <li><a href="Bewertungen.html">Bewertungen</a></li>
-            <li><a href="Studiouebersicht.html#Kontakt">Kontakt</a></li>
+            <li><a href="index.html#Kontakt">Kontakt</a></li>
           </ul>
         </div>
       </nav>
