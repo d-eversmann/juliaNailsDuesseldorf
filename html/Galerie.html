@@ -2,30 +2,53 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Galerie</title>
+    <title>Galerie – Julia Nails &amp; Beauty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="../css/silktide-consent-manager.css">
 </head>
 <body class="gallerie-seite">
-<header>
-    <div class="title-row">
-        <h2>Julia Nails &amp Beauty</h2>
+<header id="main-header"></header>
+
+<main id="main-content">
+    <section class="main-content-galerie">
+        <h2>Galerie</h2>
+        <div class="bilder">
+            <img src="../images/481218492_613674024886257_6781189343604223364_n.jpg" alt="Beispiel Nageldesign 1" data-fullsize="../images/481218492_613674024886257_6781189343604223364_n.jpg">
+            <img src="../images/unnamed-2.jpg" alt="Beispiel Nageldesign 2" data-fullsize="../images/unnamed-2.jpg">
+            <img src="../images/unnamed.jpg" alt="Beispiel Nageldesign 3" data-fullsize="../images/unnamed.jpg">
+            <img src="../images/unnamed-3.jpg" alt="Beispiel Nageldesign 4" data-fullsize="../images/unnamed-3.jpg">
+            <img src="../images/unnamed-4.jpg" alt="Beispiel Nageldesign 5" data-fullsize="../images/unnamed-4.jpg">
+            <img src="../images/unnamed-5.jpg" alt="Beispiel Nageldesign 6" data-fullsize="../images/unnamed-5.jpg">
+            <img src="../images/unnamed-6.jpg" alt="Beispiel Nageldesign 7" data-fullsize="../images/unnamed-6.jpg">
+            <img src="../images/unnamed-7.jpg" alt="Beispiel Nageldesign 8" data-fullsize="../images/unnamed-7.jpg">
+            <img src="../images/unnamed-8.jpg" alt="Beispiel Nageldesign 9" data-fullsize="../images/unnamed-8.jpg">
+        </div>
+
+        <button class="mehr-button" id="mehrBilderBtn">Mehr Bilder laden</button>
+    </section>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-nav lightbox-prev">&#10094;</button>
+    <button class="lightbox-nav lightbox-next">&#10095;</button>
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
     </div>
-    <div class="navigation-wrapper">
-        <nav>
-            <div class="nav-content">
-                <a href="Startseite.html">Studioübersicht</a>
-                <a href="Preisliste.html">Preisliste</a>
-                <a href="Team.html">Unser Team</a>
-                <a href="Galerie.html">Galerie</a>
-                <a href="Bewertungen.html">Bewertungen</a>
-                <a href="Kontakt.html">Kontakt</a>
-            </div>
-        </nav>
+</div>
+
+<footer>
+    <div class="datenschutz">
+        <p>© Julia Nails &amp; Beauty</p>
     </div>
-</header>
-<p>
-    Das hier ist die Galerie.
-</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="../js/silktide-consent-manager.js"></script>
+<script src="../js/cookie-config.js" defer></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/galerie.js" defer></script>
 </body>
 </html>
