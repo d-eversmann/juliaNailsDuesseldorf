@@ -1176,3 +1176,274 @@ body.preisliste-seite .preise > div {
         padding: 1rem;
     }
 }
+/* ============================================
+   SIMPLE FOOTER - MOBILE FIRST
+   ============================================ */
+
+.footer-simple {
+    width: min(100%, var(--container-max));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-section {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Kontakt-Items */
+.contact-item {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.contact-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #666;
+}
+
+.contact-link {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Öffnungszeiten */
+.opening-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hours-item:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-weight: 500;
+    text-align: left;
+}
+
+.time {
+    color: var(--muted);
+    text-align: right;
+}
+
+.hours-item.closed .time {
+    font-style: italic;
+    color: #999;
+}
+
+/* Map */
+.footer-map {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Footer Titel */
+.footer {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.8rem;
+    font-family: Kokonor, cursive;
+}
+
+/* Copyright */
+.datenschutz {
+    width: 100%;
+    background-color: var(--muted);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.datenschutz p {
+    margin: 0;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   DESKTOP VERSION
+   ============================================ */
+
+@media (min-width: 768px) {
+    .footer-simple {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .footer-section {
+        text-align: left;
+    }
+
+    .opening-hours {
+        margin: 0;
+        max-width: none;
+    }
+
+    .footer-map {
+        height: 200px;
+    }
+
+    /* Map nimmt beide Spalten ein */
+    .footer-section:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-simple {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .footer-section:last-child {
+        grid-column: auto;
+    }
+
+    .footer-map {
+        height: 250px;
+    }
+}
+
+/* Sehr kleine Mobile Geräte */
+@media (max-width: 480px) {
+    .footer-simple {
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+
+    .hours-item {
+        font-size: 0.9rem;
+    }
+
+    .footer-map {
+        height: 200px;
+    }
+
+    .footer {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 0.5rem 0;
+    }
+}
+/* ============================================
+   DESKTOP LAYOUT - ADRESSE & KONTAKT UNTEREINANDER
+   ============================================ */
+
+@media (min-width: 1024px) {
+    .footer-simple {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    /* Adresse und Kontakt in erster Spalte untereinander */
+    .footer-section:nth-child(1) { /* Adresse */
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-section:nth-child(2) { /* Kontakt */
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0; /* Abstand entfernen, da durch Grid gap geregelt */
+    }
+
+    .footer-section:nth-child(3) { /* Öffnungszeiten */
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer-section:nth-child(4) { /* Anfahrt */
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .opening-hours {
+        margin: 0;
+        max-width: none;
+    }
+
+    .footer-map {
+        height: 300px;
+    }
+
+    /* Sicherstellen, dass Adresse und Kontakt nicht zu breit werden */
+    .footer-section:nth-child(1),
+    .footer-section:nth-child(2) {
+        max-width: 100%;
+    }
+}
+
+/* Größere Desktop-Bildschirme */
+@media (min-width: 1200px) {
+    .footer-simple {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .footer-section:nth-child(1) { /* Adresse */
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-section:nth-child(2) { /* Kontakt */
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-section:nth-child(3) { /* Öffnungszeiten */
+        grid-column: 2;
+        grid-row: 1 / span 2; /* Öffnungszeiten über beide Zeilen */
+    }
+
+    .footer-section:nth-child(4) { /* Anfahrt */
+        grid-column: 3 / span 2; /* Karte nimmt zwei Spalten ein */
+        grid-row: 1 / span 2; /* Karte über beide Zeilen */
+    }
+
+    .footer-map {
+        height: 350px;
+    }
+}

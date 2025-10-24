@@ -42,40 +42,68 @@
                 <p>Kontakt</p>
             </div>
 
-            <div class="footer-container">
-                <div class="left-side">
-                    <div class="adresse">
-                        <p>Münsterstraße 127</p>
-                        <p>40476 Düsseldorf</p>
-                    </div>
+            <div class="footer-simple">
+                <!-- ADRESSE -->
+                <div class="footer-section">
+                    <h3>Adresse</h3>
+                    <p>Münsterstraße 127<br>40476 Düsseldorf</p>
+                </div>
 
-                    <div class="telefon">
-                        <p>Jetzt anrufen</p>
-                        <a class="telefon-inhalt" href="tel:015253286688">01525 3286688</a>
-                    </div>
+                <!-- KONTAKT -->
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p class="contact-item">
+                        <span class="contact-label">Telefon:</span>
+                        <a href="tel:015253286688" class="contact-link">01525 3286688</a>
+                    </p>
+                    <p class="contact-item">
+                        <span class="contact-label">E-Mail:</span>
+                        <a href="mailto:lee_nail@yahoo.de" class="contact-link">lee_nail@yahoo.de</a>
+                    </p>
+                </div>
 
-                    <div class="email">
-                        <p>E-Mail schreiben</p>
-                        <a class="email-inhalt" href="mailto:lee_nail@yahoo.de">lee_nail@yahoo.de</a>
+                <!-- ÖFFNUNGSZEITEN -->
+                <div class="footer-section">
+                    <h3>Öffnungszeiten</h3>
+                    <div class="opening-hours">
+                        <div class="hours-item">
+                            <span class="day">Montag</span>
+                            <span class="time">10:00 – 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Dienstag</span>
+                            <span class="time">10:00 – 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Mittwoch</span>
+                            <span class="time">10:00 – 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Donnerstag</span>
+                            <span class="time">10:00 – 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Freitag</span>
+                            <span class="time">10:00 – 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Samstag</span>
+                            <span class="time">10:00 – 19:00</span>
+                        </div>
+                        <div class="hours-item closed">
+                            <span class="day">Sonntag</span>
+                            <span class="time">Geschlossen</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="middle-side">
-                    <ul>
-                        <li class="geoeffnet"><div class="tag">Montag</div><div>10:00 – 19:00</div></li>
-                        <li class="geoeffnet"><div class="tag">Dienstag</div><div>10:00 – 19:00</div></li>
-                        <li class="geoeffnet"><div class="tag">Mittwoch</div><div>10:00 – 19:00</div></li>
-                        <li class="geoeffnet"><div class="tag">Donnerstag</div><div>10:00 – 19:00</div></li>
-                        <li class="geoeffnet"><div class="tag">Freitag</div><div>10:00 – 19:00</div></li>
-                        <li class="geoeffnet"><div class="tag">Samstag</div><div>10:00 – 19:00</div></li>
-                        <li class="geschlossen"><div class="tag">Sonntag</div><div>Wir haben geschlossen</div></li>
-                    </ul>
-                </div>
-
-                <div class="right-side">
+                <!-- MAP -->
+                <div class="footer-section">
+                    <h3>Anfahrt</h3>
                     <iframe
                             allowfullscreen
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Münsterstraße+127,+Düsseldorf&maptype=roadmap">
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Münsterstraße+127,+Düsseldorf&maptype=roadmap"
+                            class="footer-map">
                     </iframe>
                 </div>
             </div>
