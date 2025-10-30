@@ -14,15 +14,52 @@
     <section class="main-content-galerie">
         <h2>Galerie</h2>
         <div class="bilder">
-            <img src="images/481218492_613674024886257_6781189343604223364_n.jpg" alt="Beispiel Nageldesign 1" data-fullsize="../images/481218492_613674024886257_6781189343604223364_n.jpg">
-            <img src="images/unnamed-2.jpg" alt="Beispiel Nageldesign 2" data-fullsize="../images/unnamed-2.jpg">
-            <img src="images/unnamed.jpg" alt="Beispiel Nageldesign 3" data-fullsize="../images/unnamed.jpg">
-            <img src="images/unnamed-3.jpg" alt="Beispiel Nageldesign 4" data-fullsize="../images/unnamed-3.jpg">
-            <img src="images/unnamed-4.jpg" alt="Beispiel Nageldesign 5" data-fullsize="../images/unnamed-4.jpg">
-            <img src="images/unnamed-5.jpg" alt="Beispiel Nageldesign 6" data-fullsize="../images/unnamed-5.jpg">
-            <img src="images/unnamed-6.jpg" alt="Beispiel Nageldesign 7" data-fullsize="../images/unnamed-6.jpg">
-            <img src="images/unnamed-7.jpg" alt="Beispiel Nageldesign 8" data-fullsize="../images/unnamed-7.jpg">
-            <img src="images/unnamed-8.jpg" alt="Beispiel Nageldesign 9" data-fullsize="../images/unnamed-8.jpg">
+            <!-- Thumbnails mit Lazy Loading -->
+            <img src="images/thumbnails/wimpern_thumb.jpg"
+                 data-fullsize="images/fullsize/wimpern_full.jpg"
+                 alt="Beispiel Nageldesign 1"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-2_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-2_full.jpg"
+                 alt="Beispiel Nageldesign 2"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed_full.jpg"
+                 alt="Beispiel Nageldesign 3"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-3_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-3_full.jpg"
+                 alt="Beispiel Nageldesign 4"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-4_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-4_full.jpg"
+                 alt="Beispiel Nageldesign 5"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-5_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-5_full.jpg"
+                 alt="Beispiel Nageldesign 6"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-6_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-6_full.jpg"
+                 alt="Beispiel Nageldesign 7"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-7_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-7_full.jpg"
+                 alt="Beispiel Nageldesign 8"
+                 loading="lazy"
+                 class="lazy-image">
+            <img src="images/thumbnails/unnamed-8_thumb.jpg"
+                 data-fullsize="images/fullsize/unnamed-8_full.jpg"
+                 alt="Beispiel Nageldesign 9"
+                 loading="lazy"
+                 class="lazy-image">
         </div>
 
         <button class="mehr-button" id="mehrBilderBtn">Mehr Bilder laden</button>
@@ -36,12 +73,16 @@
     <button class="lightbox-nav lightbox-next">&#10095;</button>
     <div class="lightbox-content">
         <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-loading">Bild lädt...</div>
     </div>
 </div>
 
 <footer>
     <div class="datenschutz">
-        <p>© Julia Nails &amp; Beauty</p>
+        <p>© Julia Nails &amp; Beauty |
+            <a href="impressum.html">Impressum</a> |
+            <a href="impressum.html#datenschutz">Datenschutz</a>
+        </p>
     </div>
 </footer>
 

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="header-top">
         <div class="header-container">
           <div class="title-row">
-            <h1>Julia Nails &amp; Beauty</h1>
+            <a href="index.html"><h1>Julia Nails &amp; Beauty</h1></a>
           </div>
         </div>
       </div>

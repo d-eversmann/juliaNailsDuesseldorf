@@ -18,167 +18,276 @@
 
     <header class="page-header">
         <h1>Preisliste</h1>
+        <p>Transparente Preise für erstklassige Dienstleistungen</p>
     </header>
 
-    <section class="preise" aria-labelledby="preise-ueberschrift">
+    <section class="preise-grid" aria-labelledby="preise-ueberschrift">
         <h2 id="preise-ueberschrift" class="visually-hidden">Preise – Kategorien</h2>
 
-        <!-- Block 1 -->
-        <section class="gel-system-wrapper" aria-labelledby="gel-system">
-            <h3 id="gel-system">Flüssig-Gel System und Nails-Art</h3>
-            <ul class="gel-system-liste">
-                <li><span class="preisliste-beschreibung-text">Neumodellage ohne Verlängerung, sowie auffüllen</span><span class="preisliste-preis">35 €</span></li>
-                <li><span class="preisliste-beschreibung-text">Neumodellage mit Tips Verlängerung</span><span class="preisliste-preis">ab 40 €</span></li>
-                <li>
-                    <span class="preisliste-beschreibung-text">Neumodellage mit Schablone Verlängerung</span><span class="preisliste-preis">ab 50 €</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">French / Farbnägel / Glitzer</span><span class="preisliste-preis">Zuschlag ab 10 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">Nägel mit Farbverlauf</span><span class="preisliste-preis">Zuschlag ab 13 €</span></li>
-                    </ul>
+        <!-- Gel System Card -->
+        <article class="preis-card">
+            <div class="preis-card-header">
+                <h3>Flüssig-Gel System</h3>
+                <div class="preis-kategorie-icon">💅</div>
+            </div>
+            <ul class="preis-liste">
+                <li class="preis-item">
+                    <span class="dienstleistung">Neumodellage ohne Verlängerung, sowie auffüllen</span>
+                    <span class="preis">35 €</span>
                 </li>
-                <li>
-                    <span class="preisliste-beschreibung-text">Chrome-, Magnet- und Marmornägel aller Art</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">bis 2 Nägel</span><span class="preisliste-preis">4 €/Nagel</span></li>
-                        <li><span class="preisliste-beschreibung-text">ab 3 Nägel</span><span class="preisliste-preis">3 €/Nagel</span></li>
-                        <li><span class="preisliste-beschreibung-text">komplett</span><span class="preisliste-preis">25 €</span></li>
-                    </ul>
+                <li class="preis-item">
+                    <span class="dienstleistung">Neumodellage mit Tips-Verlängerung</span>
+                    <span class="preis">ab 40 €</span>
                 </li>
-            </ul>
-        </section>
-
-        <!-- Block 2 -->
-        <section class="extra-wrapper" aria-labelledby="extra">
-            <h3 id="extra">Extra</h3>
-            <ul class="extra-liste">
-                <li>
-                    <span class="preisliste-beschreibung-text">Hand gemalt</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">pro Nagel</span><span class="preisliste-preis">ab 5 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">komplett</span><span class="preisliste-preis">ab 15 €</span></li>
-                    </ul>
+                <li class="preis-item">
+                    <span class="dienstleistung">Neumodellage mit Schablonen-Verlängerung</span>
+                    <span class="preis">ab 50 €</span>
                 </li>
-                <li><span class="preisliste-beschreibung-text">Strasssteine</span><span class="preisliste-preis">pro Stück 0,50 €</span></li>
-                <li><span class="preisliste-beschreibung-text">Nagel-Piercing</span><span class="preisliste-preis">ab 10 €</span></li>
-                <li>
-                    <span class="preisliste-beschreibung-text">Nägel ablösen</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">für Neumodellage</span><span class="preisliste-preis">10 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">komplett</span><span class="preisliste-preis">20 €</span></li>
-                    </ul>
+                <li class="preis-item mit-zuschlag">
+                    <span class="dienstleistung">French / Farbnägel / Glitzer</span>
+                    <span class="preis">+ ab 10 €</span>
+                </li>
+                <li class="preis-item mit-zuschlag">
+                    <span class="dienstleistung">Nägel mit Farbverlauf</span>
+                    <span class="preis">+ ab 13 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Chrome-, Magnet- und Marmornägel (bis 2 Nägel)</span>
+                    <span class="preis">4 €/Nagel</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Chrome-, Magnet- und Marmornägel (ab 3 Nägel)</span>
+                    <span class="preis">3 €/Nagel</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Chrome-, Magnet- und Marmornägel (komplett)</span>
+                    <span class="preis">25 €</span>
                 </li>
             </ul>
-        </section>
+        </article>
 
-        <!-- Block 3 -->
-        <section class="nagelpflege-wrapper" aria-labelledby="nagelpflege">
-            <h3 id="nagelpflege">Nagelpflege</h3>
-            <h4>Maniküre mit Handbad, hochwertiger Creme, Wohlfühl-Asia-Hand</h4>
-
-            <ul class="nagelpflege-liste">
-                <li>
-                    <span class="preisliste-beschreibung-text">Massage</span><span class="preisliste-preis">20 €</span>
-                    <ul><li><span class="preisliste-beschreibung-text">extra glänzen</span><span class="preisliste-preis">Zuschlag 5 €</span></li></ul>
+        <!-- Extra Card -->
+        <article class="preis-card">
+            <div class="preis-card-header">
+                <h3>Extra & Design</h3>
+                <div class="preis-kategorie-icon">✨</div>
+            </div>
+            <ul class="preis-liste">
+                <li class="preis-item">
+                    <span class="dienstleistung">Von Hand bemalte Nägel (pro Nagel)</span>
+                    <span class="preis">ab 5 €</span>
                 </li>
-                <li>
-                    <span class="preisliste-beschreibung-text">LUXUS - SPA Pediküre (schön entspannend mit Rückenmassage), mit Fußbad und Hornhautentfernung</span><span class="preisliste-preis">40 €</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">Extra: Zehennägel-Verstärker und Farben (bis 8 Wochen haltbar)</span><span class="preisliste-preis">Zuschlag 25 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">Extra: Spezial - NU Pediküre mit Feeling, Kombination 21 Kräuter Creme Massage, verbessert Durchblutung & Haut</span><span class="preisliste-preis">Zuschlag 19 €</span></li>
-                    </ul>
+                <li class="preis-item">
+                    <span class="dienstleistung">Von Hand bemalte Nägel (komplett)</span>
+                    <span class="preis">ab 15 €</span>
                 </li>
-            </ul>
-        </section>
-
-        <!-- Block 4 -->
-        <section class="anti-aging-wrapper" aria-labelledby="anti-aging">
-            <h3 id="anti-aging">Anti-Aging Behandlungen – Lifting ohne Skalpell</h3>
-            <h4>Straffende Gesichtsbehandlung für Muskeln und Gewebe – Stimulation mit mittelfrequentem Strom</h4>
-
-            <ul class="anti-aging-liste">
-                <li><span class="preisliste-beschreibung-text">GESICHT BEHANDLUNG (ca. 75 Minuten) mit Galvanic, Spa-Ultraschall, Reinigung, Bedampfen, Tonisieren und *Epoch Glacial Marine Maske, Augenbrauen-Korrektur</span><span class="preisliste-preis">89 €</span></li>
-                <li><span class="preisliste-beschreibung-text">Möglich auch nur mit Epoch – Glacial – Marine – Maske-Behandlung (ca. 20 Minuten)</span><span class="preisliste-preis">25 €</span></li>
-                <li><span class="preisliste-beschreibung-text">AgeLOC Galvanic Spa, Reinigung mit LumiSpa, Lifting mit Galvanic Spa (ca. 30 Minuten)</span><span class="preisliste-preis">50 €</span></li>
-                <li><span class="preisliste-beschreibung-text">AgeLOC Lifting Maske, Reinigung mit LumiSpa + Anti-Aging Facelift</span><span class="preisliste-preis">40 €</span></li>
-                <li><span class="preisliste-beschreibung-text">Gesichtsmaske, AgeLOC Erfrischende Maske, Reinigung mit LumiSpa + Epoch Glacial</span><span class="preisliste-preis">40 €</span></li>
-            </ul>
-
-            <p>* VIP-Karte: Sie bezahlen 6 Behandlungskarten und erhalten eine Behandlung gratis.</p>
-            <p>Die Zeit wird es niemals verraten! AgeLoc Galvanic Spa – das kleinste Faltenbügeleisen der Welt.</p>
-        </section>
-
-        <!-- Block 5 -->
-        <section class="make-up-wrapper" aria-labelledby="make-up">
-            <h3 id="make-up">Make-up &amp; Professionelle Wimpernverlängerung</h3>
-            <h4>Professionelle Wimpernverlängerung</h4>
-            <h5>Bei der Classic-Wimpernverlängerung (1:1 Methode) wird auf jedes natürliche Wimpernhaar exakt ein künstliches Haar geklebt. Das Ergebnis sind volle, lange und geschwungene Wimpern. Bei der Volumentechnik (3D–8D) werden mehrere künstliche Wimpern auf eine natürliche Wimper geklebt.</h5>
-
-            <ul class="make-up-liste">
-                <li>
-                    <span class="preisliste-beschreibung-text">Neubeklebung</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">Volumen</span><span class="preisliste-preis">89 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">ab 8D</span><span class="preisliste-preis">139 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">Classic</span><span class="preisliste-preis">89 €</span></li>
-                    </ul>
+                <li class="preis-item">
+                    <span class="dienstleistung">Strasssteine pro Stein</span>
+                    <span class="preis">0,50 €</span>
                 </li>
-                <li>
-                    <span class="preisliste-beschreibung-text">Auffüllen bis 14 Tage</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">Volumen</span><span class="preisliste-preis">49 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">ab 8D</span><span class="preisliste-preis">65 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">Classic</span><span class="preisliste-preis">49 €</span></li>
-                    </ul>
+                <li class="preis-item">
+                    <span class="dienstleistung">Nagel-Piercing</span>
+                    <span class="preis">ab 10 €</span>
                 </li>
-                <li>
-                    <span class="preisliste-beschreibung-text">Auffüllen bis 21 Tage</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">Volumen</span><span class="preisliste-preis">65 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">ab 8D</span><span class="preisliste-preis">85 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">Classic</span><span class="preisliste-preis">59 €</span></li>
-                    </ul>
+                <li class="preis-item">
+                    <span class="dienstleistung">Nägel ablösen (für Neumodellage)</span>
+                    <span class="preis">10 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Nägel ablösen (komplett)</span>
+                    <span class="preis">20 €</span>
                 </li>
             </ul>
+        </article>
 
-            <p>Wenn Sie die Wimpernverlängerung länger als 4 Wochen tragen, sind meist weniger als 50 % der Wimpern verblieben. Wir empfehlen, diese zu entfernen und neu aufsetzen zu lassen (+10 € Zuschlag).<br>
-                Wimpernwelle inkl. Färben ist eine Alternative mit ca. 4 Wochen Halt.<br>
-                Bitte in den ersten 48 Stunden kein Wimpernserum verwenden.<br>
-                Vielen Dank für Ihr Vertrauen – wir verwenden ausschließlich Produkte höchster Qualität.</p>
-        </section>
-
-        <!-- Block 6 -->
-        <section class="micro-blading-wrapper" aria-labelledby="micro-blading">
-            <h3 id="micro-blading">Augenbrauen</h3>
-            <ul class="micro-blading-liste">
-                <li>
-                    <span class="preisliste-beschreibung-text">* Microblading</span>
-                    <ul>
-                        <li><span class="preisliste-beschreibung-text">komplett</span><span class="preisliste-preis">300 €</span></li>
-                        <li><span class="preisliste-beschreibung-text">Nachstechen nach ca. 18 Monaten</span><span class="preisliste-preis">150–200 €</span></li>
-                    </ul>
+        <!-- Nagelpflege Card -->
+        <article class="preis-card">
+            <div class="preis-card-header">
+                <h3>Nagelpflege</h3>
+                <div class="preis-kategorie-icon">🌟</div>
+            </div>
+            <div class="preis-card-subtitle">
+                <p>Maniküre mit Handbad, hochwertiger Creme, Wohlfühl-Asia-Massage</p>
+            </div>
+            <ul class="preis-liste">
+                <li class="preis-item">
+                    <span class="dienstleistung">Massage</span>
+                    <span class="preis">20 €</span>
                 </li>
-                <li><span class="preisliste-beschreibung-text">Augenbrauen zupfen</span><span class="preisliste-preis">15 €</span></li>
-                <li><span class="preisliste-beschreibung-text">Augenbrauen färben</span><span class="preisliste-preis">50 €</span></li>
-                <li><span class="preisliste-beschreibung-text">Wimpernwelle</span><span class="preisliste-preis">69 €</span></li>
+                <li class="preis-item mit-zuschlag">
+                    <span class="dienstleistung">mit besonderem Glanz</span>
+                    <span class="preis">+ 5 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Luxus - Spa Pediküre mit Fußbad und Hornhautentfernung, sowie entspannender Rückenmassage</span>
+                    <span class="preis">40 €</span>
+                </li>
+                <li class="preis-item mit-zuschlag">
+                    <span class="dienstleistung">Extra: Zehennägel-Verstärker und Farben (bis 8 Wochen haltbar)</span>
+                    <span class="preis">+ 25 €</span>
+                </li>
+                <li class="preis-item mit-zuschlag">
+                    <span class="dienstleistung">Extra: Spezial NU Pediküre mit Peeling, Massage mit einer 21-Kräuter-Creme</span>
+                    <span class="preis">+ 19 €</span>
+                </li>
             </ul>
+        </article>
 
-            <p>* Für jeden geworbenen Neukunden bedanken wir uns mit einem Rabatt von 50 € auf Ihre nächste Behandlung!</p>
-        </section>
+        <!-- Anti-Aging Card -->
+        <article class="preis-card">
+            <div class="preis-card-header">
+                <h3>Anti-Aging Behandlungen</h3>
+                <div class="preis-kategorie-icon">👑</div>
+            </div>
+            <div class="preis-card-subtitle">
+                <p>Lifting ohne Skalpell – Straffende Gesichtsbehandlung für Muskeln und Gewebe</p>
+            </div>
+            <ul class="preis-liste">
+                <li class="preis-item">
+                    <span class="dienstleistung">Gesichtsbehandlung (ca. 75 Minuten) mit Galvanic, Spa-Ultraschall, Reinigung, Bedampfen, Tonisieren und *Epoch - Glacial - Marine - Maske, sowie einer Augenbrauen-Korrektur</span>
+                    <span class="preis">89 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Epoch – Glacial – Marine – Maske-Behandlung (ca. 20 Minuten)</span>
+                    <span class="preis">25 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">AgeLOC Galvanic Spa, Reinigung mit LumiSpa, Lifting mit Galvanic Spa (ca. 30 Minuten)</span>
+                    <span class="preis">50 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">AgeLOC Lifting Maske, Reinigung mit LumiSpa + Anti-Aging Facelift</span>
+                    <span class="preis">40 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Gesichtsmaske - erfrischende AgeLOC Maske, Reinigung mit LumiSpa + Epoch Glacial</span>
+                    <span class="preis">40 €</span>
+                </li>
+            </ul>
+            <div class="preis-card-info">
+                <p><strong>* VIP-Karte:</strong> Sie bezahlen 6 Behandlungskarten und erhalten eine Behandlung gratis.</p>
+                <p>Die Zeit wird es niemals verraten! AgeLoc Galvanic Spa – das kleinste Faltenbügeleisen der Welt.</p>
+            </div>
+        </article>
 
-        <!-- Block 7 -->
-        <section class="body-tattoo-wrapper" aria-labelledby="body-tattoo">
-            <h3 id="body-tattoo">Body Tattoo</h3>
-            <p>Bist du bereit für deine neue Tätowierung? Wir beraten professionell, arbeiten hygienisch und bieten auf Wunsch auch Cover-ups.</p>
-            <p>Unser Tattoo Studio mit professionellen Mitarbeitern, ausgestattet mit den neuesten hygienischen Standards, befindet sich in einer freundlichen Gegend. Auf Wunsch übernehmen wir Design, Cover-Ups oder kleinere Tattoos zum sofortigen Tätowieren.</p>
-            <p>Fragen zu Motiven und Tattoos werden persönlich im Salon oder per E-Mail beantwortet.</p>
-        </section>
+        <!-- Wimpern Card - KORRIGIERT -->
+        <article class="preis-card preis-card-highlight">
+            <div class="preis-card-header">
+                <h3>Wimpernverlängerung</h3>
+                <div class="preis-kategorie-icon">👁️</div>
+            </div>
+            <div class="preis-card-subtitle">
+                <p>Bei der Classic-Wimpernverlängerung (1:1 Methode) wird auf jedes natürliche Wimpernhaar exakt ein künstliches Haar geklebt. Das Ergebnis sind volle, lange und geschwungene Wimpern. Bei der Volumentechnik (3D–8D) werden mehrere künstliche Wimpern auf eine natürliche Wimper geklebt.</p>
+            </div>
+
+            <div class="preis-optionen">
+                <table class="preis-tabelle">
+                    <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Classic</th>
+                        <th>Volumen</th>
+                        <th>ab 8D</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Neubeklebung</td>
+                        <td>89 €</td>
+                        <td>90 €</td>
+                        <td>139 €</td>
+                    </tr>
+                    <tr>
+                        <td>Auffüllen bis 14 Tage</td>
+                        <td>49 €</td>
+                        <td>49 €</td>
+                        <td>65 €</td>
+                    </tr>
+                    <tr>
+                        <td>Auffüllen bis 21 Tage</td>
+                        <td>59 €</td>
+                        <td>65 €</td>
+                        <td>85 €</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="preis-card-info">
+                <p><strong>Hinweis:</strong> Wenn Sie die Wimpernverlängerung länger als 4 Wochen tragen, sind meist weniger als 50 % der Wimpern verblieben. Wir empfehlen, diese zu entfernen und neu aufsetzen zu lassen (+10 € Zuschlag).</p>
+                <p>Wimpernwelle inkl. Färben ist eine Alternative mit ca. 4 Wochen Halt.</p>
+                <p>Bitte in den ersten 48 Stunden kein Wimpernserum verwenden.</p>
+                <p>Vielen Dank für Ihr Vertrauen – wir verwenden ausschließlich Produkte höchster Qualität.</p>
+            </div>
+        </article>
+
+        <!-- Augenbrauen Card -->
+        <article class="preis-card">
+            <div class="preis-card-header">
+                <h3>Augenbrauen</h3>
+                <div class="preis-kategorie-icon">✏️</div>
+            </div>
+            <ul class="preis-liste">
+                <li class="preis-item">
+                    <span class="dienstleistung">Microblading (komplett)</span>
+                    <span class="preis">300 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Microblading Nachstechen nach ca. 18 Monaten</span>
+                    <span class="preis">150–200 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Augenbrauen zupfen</span>
+                    <span class="preis">15 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Augenbrauen färben</span>
+                    <span class="preis">50 €</span>
+                </li>
+                <li class="preis-item">
+                    <span class="dienstleistung">Wimpernwelle</span>
+                    <span class="preis">69 €</span>
+                </li>
+            </ul>
+            <div class="preis-card-info highlight">
+                <p><strong>* Special Offer:</strong> Für jeden geworbenen Neukunden bedanken wir uns mit einem Rabatt von 50 € auf Ihre nächste Behandlung!</p>
+            </div>
+        </article>
+
+        <!-- Tattoo Card -->
+        <article class="preis-card">
+            <div class="preis-card-header">
+                <h3>Body Tattoo</h3>
+                <div class="preis-kategorie-icon">🎨</div>
+            </div>
+            <div class="preis-card-info">
+                <p>Bist du bereit für deine neue Tätowierung? Wir beraten professionell, arbeiten hygienisch und bieten auf Wunsch auch Cover-ups.</p>
+                <p>Unser Tattoo Studio mit professionellen Mitarbeitern, ausgestattet mit den neuesten hygienischen Standards, befindet sich in einer freundlichen Gegend. Auf Wunsch übernehmen wir Design, Cover-Ups oder kleinere Tattoos zum sofortigen Tätowieren.</p>
+                <p>Fragen zu Motiven und Tattoos werden persönlich im Salon oder per E-Mail beantwortet.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Info Bereich -->
+    <section class="preis-info">
+        <div class="info-card">
+            <h3>Termin vereinbaren</h3>
+            <p>Rufen Sie uns an oder schreiben Sie uns eine E-Mail – wir beraten Sie gerne persönlich.</p>
+            <div class="kontakt-links">
+                <a href="tel:015253286688" class="button">01525 3286688</a>
+                <a href="mailto:lee_nail@yahoo.de" class="button secondary">E-Mail schreiben</a>
     </section>
 </main>
+
 <footer>
     <div class="datenschutz">
-        <p>© Julia Nails &amp; Beauty</p>
+        <p>© Julia Nails &amp; Beauty |
+            <a href="impressum.html">Impressum</a> |
+            <a href="impressum.html#datenschutz">Datenschutz</a>
+        </p>
     </div>
 </footer>
+
 <!-- SCRIPTS -->
 <script src="js/silktide-consent-manager.js"></script>
 <script src="js/cookie-config.js" defer></script>

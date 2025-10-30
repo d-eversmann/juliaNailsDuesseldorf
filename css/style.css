@@ -19,15 +19,33 @@
     --background-light: #f8f8f8;
 }
 
-/* Reset & Box-Sizing */
+/* ============================================
+   RESET & GRUNDLEGENDE ELEMENTE
+   ============================================ */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+body {
+    background: #EAE9E7;
+    background: linear-gradient(to bottom, #EAE9E7 0%, #C6C6C6 100%);
+    color: #000;
+    font-family: Baghdad, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+
 /* ============================================
-   ACCESSIBILITY & UTILITY CLASSES
+   UTILITY & ACCESSIBILITY CLASSES
    ============================================ */
 
 .visually-hidden {
@@ -42,13 +60,6 @@
     border: 0;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-}
-
-/* Target-Hervorhebung deaktivieren */
 :target {
     outline: none;
     outline-offset: 0;
@@ -66,18 +77,9 @@ html {
 }
 
 /* ============================================
-   GRUNDLEGENDE ELEMENTE
+   MEDIEN & INTERAKTIVE ELEMENTE
    ============================================ */
 
-body {
-    background-color: #fff;
-    color: #000;
-    font-family: Baghdad, "Segoe UI", Roboto, Arial, sans-serif;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Responsive Medien-Elemente */
 img, iframe, video {
     max-width: 100%;
     height: auto;
@@ -87,10 +89,6 @@ iframe {
     display: block;
     border: 0;
 }
-
-/* ============================================
-   LINKS & INTERAKTIVE ELEMENTE
-   ============================================ */
 
 a {
     text-decoration: none;
@@ -114,9 +112,8 @@ a:focus-visible {
    HEADER & NAVIGATION
    ============================================ */
 
-/* Header Container */
 .site-header {
-    background: #fff;
+    background: #EAE9E7;
     border-bottom: 2px solid #f0f0f0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     width: 100%;
@@ -124,10 +121,9 @@ a:focus-visible {
     z-index: 100;
 }
 
-/* Oberer Bereich mit Titel */
 .header-top {
     border-bottom: 1px solid #f0f0f0;
-    background: #fff;
+    background: #EAE9E7;
 }
 
 .header-container {
@@ -139,7 +135,6 @@ a:focus-visible {
     padding: 1.5rem 2rem;
 }
 
-/* Titel/Logo */
 .title-row h1 {
     font-family: Kokonor, cursive;
     font-size: 2.5rem;
@@ -149,10 +144,12 @@ a:focus-visible {
     text-align: center;
     letter-spacing: 1px;
 }
+.title-row a:hover{
+    text-decoration: none;
+}
 
-/* Navigationsbereich */
 .main-nav {
-    background: #fff;
+    background: #EAE9E7;
 }
 
 .nav-container {
@@ -163,7 +160,6 @@ a:focus-visible {
     padding: 0 2rem;
 }
 
-/* Hauptnavigation */
 .nav-content {
     display: flex;
     align-items: center;
@@ -208,7 +204,6 @@ a:focus-visible {
     outline: none;
 }
 
-/* Unterstreichungseffekt für Hover */
 .nav-content a:not(.active):hover::after {
     content: '';
     position: absolute;
@@ -221,256 +216,63 @@ a:focus-visible {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN FÜR HEADER
+   HAUPINHALT (MAIN CONTENT)
    ============================================ */
 
-/* Tablet */
-@media (max-width: 900px) {
-    .header-container {
-        padding: 1.2rem 1.5rem;
-    }
-
-    .title-row h1 {
-        font-size: 2rem;
-    }
-
-    .nav-container {
-        padding: 0 1.5rem;
-    }
-
-    .nav-content {
-        gap: 2rem;
-    }
-
-    .nav-content a {
-        font-size: 1rem;
-        padding: 1rem 0.3rem;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .header-container {
-        padding: 1rem;
-    }
-
-    .title-row h1 {
-        font-size: 1.8rem;
-    }
-
-    .nav-container {
-        padding: 0 1rem;
-    }
-
-    .nav-content {
-        gap: 1.5rem;
-        justify-content: center;
-    }
-
-    .nav-content a {
-        font-size: 0.95rem;
-        padding: 0.8rem 0.2rem;
-    }
-}
-
-/* Kleine Mobile Geräte */
-@media (max-width: 600px) {
-    .nav-content {
-        gap: 1rem;
-    }
-
-    .nav-content a {
-        font-size: 0.9rem;
-        padding: 0.7rem 0.1rem;
-    }
-
-    .title-row h1 {
-        font-size: 1.6rem;
-    }
-}
-
-/* Sehr kleine Screens */
-@media (max-width: 480px) {
-    .nav-content {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .nav-content li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-content a {
-        display: block;
-        padding: 0.8rem 0.5rem;
-        border-bottom: 1px solid #f0f0f0;
-        width: 100%;
-    }
-
-    .nav-content a.active {
-        border-bottom: 3px solid var(--primary-color);
-    }
-}
-
-/* ============================================
-   HAUPINHALT UNTER HEADER
-   ============================================ */
-
-/* Stellt sicher, dass der Content nicht unter dem Header beginnt */
 main {
     padding-top: 2rem;
 }
 
-/* Anpassung für Studioübersicht */
+/* Studio Übersicht */
 .main-content-studio-uebersicht {
-    padding-left: 10%;
     padding-top: 2rem;
     justify-content: center;
 }
 
-/* Anpassung für Galerie */
+.main-content-studio-uebersicht h4 {
+    margin-top: 40px;
+}
+
+.main-content-studio-uebersicht article {
+    padding: 0 100px;
+}
+
+.studio-banner {
+    display: flex;
+}
+
+.studio-banner img {
+    width: 50%;
+}
+
+/* Galerie */
 .main-content-galerie {
     text-align: center;
     padding-top: 2rem;
 }
 
-/* Anpassung für Bewertungen */
+/* Bewertungen */
 #review-container {
     padding-top: 2rem;
+    width: 100%;
+    text-align: center;
 }
 
-/* Anpassung für Teamseite */
+/* Team Seite */
 .team-grid {
     padding-top: 1rem;
 }
 
-/* Anpassung für Preisliste */
+/* Preisliste */
 body.preisliste-seite .preise {
     padding-top: 1rem;
-}
-
-/* ============================================
-   FOOTER & KONTAKTINFORMATIONEN
-   ============================================ */
-
-/* Footer Container */
-.footer-container {
-    width: min(100%, var(--container-max));
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: var(--space-8);
-    padding-inline: var(--space-4);
-}
-
-/* Footer Spalten */
-footer .left-side,
-footer .middle-side,
-footer .right-side {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    padding: var(--space-3);
-}
-
-/* Kontakt-Informationen */
-.telefon-inhalt,
-.email-inhalt {
-    font-size: 16px;
-    display: inline-block;
-    margin-top: var(--space-1);
-}
-
-.telefon,
-.email {
-    margin-top: var(--space-3);
-}
-
-.email p,
-.telefon p {
-    font-size: 1rem;
-    margin: var(--space-1) 0;
-}
-
-/* Öffnungszeiten */
-.tag {
-    padding-right: 1%;
-}
-
-.geoeffnet,
-.geschlossen {
-    display: flex;
-}
-
-.middle-side ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.middle-side li {
-    display: grid;
-    grid-template-columns: clamp(90px, 28vw, 120px) auto;
-    column-gap: clamp(10px, 4vw, 32px);
-    align-items: center;
-    padding: 4px 0;
-}
-
-.middle-side .tag {
-    font-weight: 600;
-}
-
-.middle-side li div:last-child {
-    color: var(--muted);
-}
-
-.middle-side li.geschlossen {
-    opacity: .9;
-}
-
-.middle-side li.geschlossen div:last-child {
-    font-style: italic;
-}
-
-/* Footer Map */
-footer .right-side iframe {
-    width: 100%;
-    height: 100%;
-    flex: 1 1 auto;
-    min-height: 0;
-}
-
-.footer {
-    text-align: center;
-    margin: 30px;
-    font-size: 30px;
-    font-family: Kokonor, cursive;
-}
-
-.datenschutz {
-    width: 100%;
-    background-color: var(--muted);
 }
 
 /* ============================================
    SEITENSPEZIFISCHE LAYOUTS
    ============================================ */
 
-/* Studio Übersicht */
-.main-content-studio-uebersicht {
-    padding-left: 10%;
-    justify-content: center;
-}
-
-/* Galerie */
-.main-content-galerie {
-    text-align: center;
-}
-
+/* GALERIE */
 .bilder {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -493,12 +295,7 @@ footer .right-side iframe {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Bewertungen */
-#review-container {
-    width: 100%;
-    text-align: center;
-}
-
+/* BEWERTUNGEN */
 .reviews-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -530,8 +327,79 @@ footer .right-side iframe {
 .rating-stars {
     color: #d4af37;
 }
+/* ============================================
+   RECHTLICHE SEITEN STYLES
+   ============================================ */
 
-/* Team Seite */
+body.rechtliche-seite main {
+    padding-top: 2rem;
+}
+
+.rechtliche-content {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1rem 4rem;
+}
+
+.rechtlicher-block {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.rechtlicher-block h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.rechtlicher-block h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.rechtliche-kategorie {
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.adresse-block,
+.kontakt-block,
+.rechtliche-details {
+    margin-bottom: 1.5rem;
+}
+
+.datenschutz-abschnitt {
+    margin-bottom: 2rem;
+}
+
+.datenschutz-abschnitt:last-child {
+    margin-bottom: 0;
+}
+
+.rechte-liste {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.rechte-liste li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.external-link {
+    word-break: break-all;
+}
+
+
+/* TEAM SEITE */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -556,10 +424,7 @@ footer .right-side iframe {
     margin: 0 auto;
     color: var(--muted);
     font-size: 1.1rem;
-    height: auto;
-    overflow: visible;
     line-height: 1.5;
-    white-space: normal;
 }
 
 .team-card {
@@ -630,96 +495,647 @@ footer .right-side iframe {
     margin: 0 auto;
     font-size: 1rem;
     color: #333;
-    height: auto;
-    overflow: visible;
     line-height: 1.5;
-    white-space: normal;
 }
 
-/* Preisliste */
-body.preisliste-seite .preise {
-    max-width: 1000px;
-    margin: 28px auto 80px;
-    padding: 0 16px;
+/*!* PREISLISTE *!*/
+/*body.preisliste-seite .preise {*/
+/*    max-width: 1000px;*/
+/*    margin: 28px auto 80px;*/
+/*    padding: 0 16px;*/
+/*}*/
+
+/*body.preisliste-seite .preise h3,*/
+/*body.preisliste-seite .preise h4,*/
+/*body.preisliste-seite .preise h5 {*/
+/*    text-align: center;*/
+/*    margin: 0 0 .75rem 0;*/
+/*}*/
+
+/*body.preisliste-seite main li {*/
+/*    text-align: left;*/
+/*}*/
+
+/*body.preisliste-seite .preise ul {*/
+/*    list-style: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*body.preisliste-seite .preise li {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr auto;*/
+/*    column-gap: 12px;*/
+/*    align-items: baseline;*/
+/*    padding: 6px 0;*/
+/*}*/
+
+/*body.preisliste-seite .preise .preisliste-beschreibung-text {*/
+/*    min-width: 0;*/
+/*}*/
+
+/*body.preisliste-seite .preise .preisliste-preis {*/
+/*    text-align: right;*/
+/*    white-space: nowrap;*/
+/*    font-variant-numeric: tabular-nums;*/
+/*    color: inherit;*/
+/*}*/
+
+/*body.preisliste-seite {*/
+/*    --preis-indent: 1.1rem;*/
+/*}*/
+
+/*body.preisliste-seite .preise li > ul {*/
+/*    grid-column: 1 / -1;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*body.preisliste-seite .preise ul > ul {*/
+/*    grid-column: 1 / -1;*/
+/*}*/
+
+/*body.preisliste-seite .preise ul ul li {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr auto;*/
+/*    column-gap: 12px;*/
+/*    align-items: baseline;*/
+/*}*/
+
+/*body.preisliste-seite .preise ul ul .preisliste-beschreibung-text {*/
+/*    position: relative;*/
+/*    padding-left: var(--preis-indent);*/
+/*}*/
+
+/*body.preisliste-seite .preise ul ul .preisliste-beschreibung-text::before {*/
+/*    content: "•";*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: .2em;*/
+/*    color: #6b7280;*/
+/*    font-size: .9em;*/
+/*}*/
+
+/*body.preisliste-seite .preise ul > li + li {*/
+/*    border-top: 1px dashed var(--border-color);*/
+/*}*/
+
+/*body.preisliste-seite .preise > div {*/
+/*    margin: 1.25rem 0 2rem;*/
+/*}*/
+/* ============================================
+   PREISLISTE GRID STYLES
+   ============================================ */
+
+.preise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: var(--container-max);
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-body.preisliste-seite .preise h3,
-body.preisliste-seite .preise h4,
-body.preisliste-seite .preise h5 {
-    text-align: center;
-    margin: 0 0 .75rem 0;
+.preis-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-body.preisliste-seite main li {
-    text-align: left;
+.preis-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-body.preisliste-seite .preise ul {
+.preis-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--background-light);
+}
+
+.preis-card-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.preis-kategorie-icon {
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.preis-card-subtitle {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background: var(--background-light);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.4;
+    border-left: 3px solid var(--border-color);
+}
+
+.preis-card-subtitle p {
+    margin: 0;
+}
+
+/* Preis Liste */
+.preis-liste {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-body.preisliste-seite .preise li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 12px;
-    align-items: baseline;
-    padding: 6px 0;
+.preis-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+    gap: 1rem;
 }
 
-body.preisliste-seite .preise .preisliste-beschreibung-text {
-    min-width: 0;
+.preis-item:hover {
+    background-color: var(--background-light);
+    margin: 0 -1rem;
+    padding: 1rem;
+    border-radius: 6px;
 }
 
-body.preisliste-seite .preise .preisliste-preis {
-    text-align: right;
+.preis-item:last-child {
+    border-bottom: none;
+}
+
+.dienstleistung {
+    flex: 1;
+    color: #333;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.preis {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
     white-space: nowrap;
-    font-variant-numeric: tabular-nums;
-    color: inherit;
+    min-width: 80px;
+    text-align: right;
 }
 
-body.preisliste-seite {
-    --preis-indent: 1.1rem;
+.mit-zuschlag .preis {
+    color: var(--muted);
+    font-weight: 500;
+    font-style: italic;
 }
 
-body.preisliste-seite .preise li > ul {
-    grid-column: 1 / -1;
-    margin: 0;
-    padding: 0;
+.preis-card-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--muted);
+    border-left: 3px solid var(--border-color);
 }
 
-body.preisliste-seite .preise ul > ul {
-    grid-column: 1 / -1;
+.preis-card-info.highlight {
+    background: var(--background-light);
+    border-left: 3px solid var(--primary-color);
 }
 
-body.preisliste-seite .preise ul ul li {
+.preis-card-info p {
+    margin: 0.5rem 0;
+}
+
+.preis-card-info p:first-child {
+    margin-top: 0;
+}
+
+.preis-card-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Preis Optionen für Wimpern */
+.preis-optionen {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.preis-option {
+    flex: 1;
+    min-width: 120px;
+    background: var(--background-light);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.preis-option h4 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+.preis-option-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.preis-option-details:last-child {
+    border-bottom: none;
+}
+/* Preis Tabelle Styles */
+.preis-tabelle {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin: 1.5rem 0;
+}
+
+.preis-tabelle th {
+    background: var(--background-light);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 1rem;
+}
+
+.preis-tabelle td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.preis-tabelle tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.preis-tabelle td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+}
+
+.preis-tabelle td:not(:first-child) {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* Responsive für Mobile */
+@media (max-width: 768px) {
+    .preis-tabelle {
+        font-size: 0.9rem;
+    }
+
+    .preis-tabelle th,
+    .preis-tabelle td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .preis-tabelle {
+        font-size: 0.85rem;
+    }
+
+    .preis-tabelle th,
+    .preis-tabelle td {
+        padding: 0.6rem 0.3rem;
+    }
+}
+
+/* Info Bereich */
+.preis-info {
     display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 12px;
-    align-items: baseline;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: var(--container-max);
+    margin: 3rem auto;
+    padding: 0 1rem;
 }
 
-body.preisliste-seite .preise ul ul .preisliste-beschreibung-text {
-    position: relative;
-    padding-left: var(--preis-indent);
+.info-card {
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
 }
 
-body.preisliste-seite .preise ul ul .preisliste-beschreibung-text::before {
-    content: "•";
+.info-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.kontakt-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: #333333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.button:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.button.secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.button.secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .preise-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .preis-card {
+        padding: 1.5rem;
+    }
+
+    .preis-card-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .preis-optionen {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .preis-option {
+        min-width: auto;
+    }
+
+    .kontakt-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .preis-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .preis {
+        margin-left: 0;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .dienstleistung {
+        font-size: 0.9rem;
+    }
+
+    .preis-card-subtitle,
+    .preis-card-info {
+        font-size: 0.85rem;
+    }
+}
+/* ============================================
+   FOOTER & KONTAKT
+   ============================================ */
+
+.footer-simple {
+    width: min(100%, var(--container-max));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-section {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-item {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.contact-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #666;
+}
+
+.contact-link {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.opening-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hours-item:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-weight: 500;
+    text-align: left;
+}
+
+.time {
+    color: var(--muted);
+    text-align: right;
+}
+
+.hours-item.closed .time {
+    font-style: italic;
+    color: #999;
+}
+
+.footer-map {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border: none;
+}
+
+.footer {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.8rem;
+    font-family: Kokonor, cursive;
+}
+
+.datenschutz {
+    width: 100%;
+    background-color: var(--muted);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.datenschutz p {
+    margin: 0;
+    color: white;
+    font-size: 0.9rem;
+}
+/* ============================================
+   FOOTER LINKS STYLES
+   ============================================ */
+
+.datenschutz {
+    width: 100%;
+    background-color: var(--muted);
+    padding: 1rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* sorgt für zentrierten Inhalt */
+    position: relative; /* erlaubt exaktes Positionieren der Social Media-Icons */
+}
+
+/* Social Media linksbündig */
+.social-media {
     position: absolute;
-    left: 0;
-    top: .2em;
-    color: #6b7280;
-    font-size: .9em;
+    right: 1rem;
+    margin: 0;
 }
 
-body.preisliste-seite .preise ul > li + li {
-    border-top: 1px dashed var(--border-color);
+.social-media img {
+    width: 30px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
-body.preisliste-seite .preise > div {
-    margin: 1.25rem 0 2rem;
+/* Info-Text zentriert */
+.footer-info {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.datenschutz a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.datenschutz a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* RESPONSIVE Anpassungen */
+@media (max-width: 600px) {
+    .footer-row {
+        flex-direction: column;
+        position: static;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .social-media {
+        position: static;
+        margin-bottom: 0.5rem;
+    }
+
+    .social-media img {
+        width: 35px;
+    }
 }
 
 /* ============================================
@@ -816,7 +1232,6 @@ body.preisliste-seite .preise > div {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* Mehr-Button */
 .mehr-button {
     display: block;
     margin: 40px auto;
@@ -850,10 +1265,64 @@ body.preisliste-seite .preise > div {
 }
 
 /* ============================================
+   LAZY LOADING & PERFORMANCE
+   ============================================ */
+
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: #f8f8f8;
+    border-radius: 6px;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+.lightbox-loading {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    z-index: 10002;
+}
+
+.lightbox-loading.active {
+    display: block;
+}
+
+.lightbox-img.blur {
+    filter: blur(10px);
+    transition: filter 0.3s ease;
+}
+
+.lightbox-img.sharp {
+    filter: blur(0);
+}
+
+/* Performance Optimierungen */
+.bilder img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.bilder img:hover {
+    transform: scale(1.05) translateZ(0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lightbox-img {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* ============================================
    MODALS & OVERLAYS
    ============================================ */
 
-/* Datenschutz Modal */
 .modal-backdrop[hidden] {
     display: none !important;
 }
@@ -930,7 +1399,6 @@ body.preisliste-seite .preise > div {
     color: #888;
 }
 
-/* Buttons */
 .button {
     display: inline-block;
     padding: .6rem 1rem;
@@ -949,7 +1417,6 @@ body.preisliste-seite .preise > div {
     outline-offset: 2px;
 }
 
-/* Cookie Banner */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -989,7 +1456,6 @@ body.preisliste-seite .preise > div {
     background: #6ab5ff;
 }
 
-/* Legal Links */
 .site-legal {
     width: min(100%, var(--container-max));
     margin: 0.5rem auto 2rem;
@@ -1015,80 +1481,121 @@ body.preisliste-seite .preise > div {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - MOBILE FIRST
    ============================================ */
 
-/* Header Responsive */
+/* HEADER RESPONSIVE */
 @media (max-width: 900px) {
     .header-container {
-        flex-direction: column;
-        gap: 1rem;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .title-row h1 {
+        font-size: 2rem;
+    }
+
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-content {
+        gap: 2rem;
+    }
+
+    .nav-content a {
+        font-size: 1rem;
+        padding: 1rem 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
         padding: 1rem;
     }
 
     .title-row h1 {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
     }
 
     .nav-content {
-        justify-content: center;
         gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .nav-content a {
+        font-size: 0.95rem;
+        padding: 0.8rem 0.2rem;
     }
 }
 
 @media (max-width: 600px) {
     .nav-content {
-        flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
     .nav-content a {
-        padding: 0.25rem 0;
+        font-size: 0.9rem;
+        padding: 0.7rem 0.1rem;
+    }
+
+    .title-row h1 {
+        font-size: 1.6rem;
     }
 }
 
-/* Footer Responsive */
-@media (max-width: 800px) {
-    .footer-container {
+@media (max-width: 480px) {
+    .nav-content {
         flex-direction: column;
-        gap: var(--space-6);
-    }
-
-    footer .left-side,
-    footer .middle-side,
-    footer .right-side {
+        gap: 0.5rem;
         width: 100%;
     }
-}
 
-@media (max-width: 420px) {
-    .middle-side li {
-        grid-template-columns: 1fr;
-        row-gap: 4px;
+    .nav-content li {
+        width: 100%;
+        text-align: center;
     }
 
-    .middle-side li div:last-child {
-        justify-self: start;
-        padding-left: .75rem;
+    .nav-content a {
+        display: block;
+        padding: 0.8rem 0.5rem;
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    .nav-content a.active {
+        border-bottom: 3px solid var(--primary-color);
     }
 }
 
-/* Galerie Responsive */
-@media (max-width: 700px) {
+/* STUDIOÜBERSICHT RESPONSIVE*/
+@media (max-width: 480px) {
+    .main-content-studio-uebersicht article {
+        padding: 0 20px;
+    }
+
+}
+
+/* GALERIE RESPONSIVE */
+@media (max-width: 768px) {
     .bilder {
         grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
         max-width: 96%;
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .bilder {
         grid-template-columns: 1fr;
+        gap: 6px;
     }
 }
 
-/* Bewertungen Responsive */
+/* BEWERTUNGEN RESPONSIVE */
 @media (max-width: 760px) {
     .reviews-row {
         grid-template-columns: 1fr;
@@ -1096,7 +1603,7 @@ body.preisliste-seite .preise > div {
     }
 }
 
-/* Team Responsive */
+/* TEAM RESPONSIVE */
 @media (max-width: 600px) {
     .team-media img {
         width: 120px;
@@ -1112,7 +1619,7 @@ body.preisliste-seite .preise > div {
     }
 }
 
-/* Lightbox Responsive */
+/* LIGHTBOX RESPONSIVE */
 @media (max-width: 768px) {
     .lightbox-nav {
         width: 50px;
@@ -1170,133 +1677,33 @@ body.preisliste-seite .preise > div {
     }
 }
 
-/* Tablet Optimierung */
-@media (max-width: 1100px) {
-    .header-container {
-        padding: 1rem;
+/* FOOTER RESPONSIVE */
+@media (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    footer .left-side,
+    footer .middle-side,
+    footer .right-side {
+        width: 100%;
     }
 }
-/* ============================================
-   SIMPLE FOOTER - MOBILE FIRST
-   ============================================ */
 
-.footer-simple {
-    width: min(100%, var(--container-max));
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 1rem;
+@media (max-width: 420px) {
+    .middle-side li {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+    }
+
+    .middle-side li div:last-child {
+        justify-self: start;
+        padding-left: .75rem;
+    }
 }
 
-.footer-section {
-    width: 100%;
-    text-align: center;
-}
-
-.footer-section h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #333;
-    font-weight: 600;
-}
-
-/* Kontakt-Items */
-.contact-item {
-    margin: 1rem 0;
-    font-size: 1rem;
-}
-
-.contact-label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-    color: #666;
-}
-
-.contact-link {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 0.25rem;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-/* Öffnungszeiten */
-.opening-hours {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.hours-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.hours-item:last-child {
-    border-bottom: none;
-}
-
-.day {
-    font-weight: 500;
-    text-align: left;
-}
-
-.time {
-    color: var(--muted);
-    text-align: right;
-}
-
-.hours-item.closed .time {
-    font-style: italic;
-    color: #999;
-}
-
-/* Map */
-.footer-map {
-    width: 100%;
-    height: 250px;
-    border-radius: 8px;
-    border: none;
-}
-
-/* Footer Titel */
-.footer {
-    text-align: center;
-    margin: 2rem 0 1rem 0;
-    font-size: 1.8rem;
-    font-family: Kokonor, cursive;
-}
-
-/* Copyright */
-.datenschutz {
-    width: 100%;
-    background-color: var(--muted);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-.datenschutz p {
-    margin: 0;
-    color: white;
-    font-size: 0.9rem;
-}
-
-/* ============================================
-   DESKTOP VERSION
-   ============================================ */
-
+/* SIMPLE FOOTER RESPONSIVE */
 @media (min-width: 768px) {
     .footer-simple {
         display: grid;
@@ -1318,7 +1725,6 @@ body.preisliste-seite .preise > div {
         height: 200px;
     }
 
-    /* Map nimmt beide Spalten ein */
     .footer-section:last-child {
         grid-column: 1 / -1;
     }
@@ -1339,7 +1745,80 @@ body.preisliste-seite .preise > div {
     }
 }
 
-/* Sehr kleine Mobile Geräte */
+@media (min-width: 1024px) {
+    .footer-simple {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .footer-section:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-section:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0;
+    }
+
+    .footer-section:nth-child(3) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer-section:nth-child(4) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .opening-hours {
+        margin: 0;
+        max-width: none;
+    }
+
+    .footer-map {
+        height: 300px;
+    }
+
+    .footer-section:nth-child(1),
+    .footer-section:nth-child(2) {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-simple {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .footer-section:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-section:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-section:nth-child(3) {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .footer-section:nth-child(4) {
+        grid-column: 3 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .footer-map {
+        height: 350px;
+    }
+}
+
 @media (max-width: 480px) {
     .footer-simple {
         gap: 1.5rem;
@@ -1367,83 +1846,31 @@ body.preisliste-seite .preise > div {
         margin: 1.5rem 0 0.5rem 0;
     }
 }
-/* ============================================
-   DESKTOP LAYOUT - ADRESSE & KONTAKT UNTEREINANDER
-   ============================================ */
 
-@media (min-width: 1024px) {
-    .footer-simple {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2.5rem;
-        align-items: start;
+/* TABLET OPTIMIERUNG */
+@media (max-width: 1100px) {
+    .header-container {
+        padding: 1rem;
+    }
+}
+/* Responsive Design für rechtliche Seiten */
+@media (max-width: 768px) {
+    .rechtlicher-block {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
-    /* Adresse und Kontakt in erster Spalte untereinander */
-    .footer-section:nth-child(1) { /* Adresse */
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .footer-section:nth-child(2) { /* Kontakt */
-        grid-column: 1;
-        grid-row: 2;
-        margin-top: 0; /* Abstand entfernen, da durch Grid gap geregelt */
-    }
-
-    .footer-section:nth-child(3) { /* Öffnungszeiten */
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .footer-section:nth-child(4) { /* Anfahrt */
-        grid-column: 3;
-        grid-row: 1;
-    }
-
-    .opening-hours {
-        margin: 0;
-        max-width: none;
-    }
-
-    .footer-map {
-        height: 300px;
-    }
-
-    /* Sicherstellen, dass Adresse und Kontakt nicht zu breit werden */
-    .footer-section:nth-child(1),
-    .footer-section:nth-child(2) {
-        max-width: 100%;
+    .rechtliche-content {
+        padding: 0 0.5rem 2rem;
     }
 }
 
-/* Größere Desktop-Bildschirme */
-@media (min-width: 1200px) {
-    .footer-simple {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+@media (max-width: 480px) {
+    .rechtlicher-block {
+        padding: 1rem;
     }
 
-    .footer-section:nth-child(1) { /* Adresse */
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .footer-section:nth-child(2) { /* Kontakt */
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .footer-section:nth-child(3) { /* Öffnungszeiten */
-        grid-column: 2;
-        grid-row: 1 / span 2; /* Öffnungszeiten über beide Zeilen */
-    }
-
-    .footer-section:nth-child(4) { /* Anfahrt */
-        grid-column: 3 / span 2; /* Karte nimmt zwei Spalten ein */
-        grid-row: 1 / span 2; /* Karte über beide Zeilen */
-    }
-
-    .footer-map {
-        height: 350px;
+    .rechtlicher-block h2 {
+        font-size: 1.3rem;
     }
 }

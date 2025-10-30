@@ -488,9 +488,10 @@
   animation: silktide-fadeIn 0.3s ease-in-out forwards;
 }
 
+/* auf bottom left geändert*/
 #silktide-cookie-icon.bottomRight {
-  left: auto;
-  right: 10px;
+  left: 10px;
+  right: auto;
 }
 
 #silktide-cookie-icon svg {
