@@ -449,8 +449,8 @@ body.rechtliche-seite main {
 }
 
 .team-media img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border-color);
