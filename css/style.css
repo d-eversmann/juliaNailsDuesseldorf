@@ -281,7 +281,8 @@ body.preisliste-seite .preise {
     margin: 0 auto;
 }
 
-.bilder img {
+.bilder img,
+.gallery-item {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -290,9 +291,41 @@ body.preisliste-seite .preise {
     transition: all 0.3s ease;
 }
 
-.bilder img:hover {
+.gallery-item {
+    position: relative;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    height: 100%;
+}
+
+.bilder img:hover,
+.gallery-item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-play-badge {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    padding-left: 3px;
+    z-index: 1;
 }
 
 /* BEWERTUNGEN */
@@ -1165,7 +1198,8 @@ body.rechtliche-seite main {
     box-sizing: border-box;
 }
 
-.lightbox-img {
+.lightbox-img,
+.lightbox-video {
     max-width: 90%;
     max-height: 90%;
     width: auto;
@@ -1173,6 +1207,11 @@ body.rechtliche-seite main {
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-video {
+    display: none;
+    background: #000;
 }
 
 .lightbox-close {
@@ -1304,17 +1343,20 @@ body.rechtliche-seite main {
 }
 
 /* Performance Optimierungen */
-.bilder img {
+.bilder img,
+.gallery-item {
     transform: translateZ(0);
     backface-visibility: hidden;
 }
 
-.bilder img:hover {
+.bilder img:hover,
+.gallery-item:hover {
     transform: scale(1.05) translateZ(0);
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.lightbox-img {
+.lightbox-img,
+.lightbox-video {
     transform: translateZ(0);
     will-change: transform, opacity;
 }

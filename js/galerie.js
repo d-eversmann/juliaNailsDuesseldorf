@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const lightboxVideo = lightbox.querySelector('.lightbox-video');
     const lightboxClose = lightbox.querySelector('.lightbox-close');
     const lightboxPrev = lightbox.querySelector('.lightbox-prev');
     const lightboxNext = lightbox.querySelector('.lightbox-next');
@@ -20,11 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Jetzt einheitliches Schema: fotoXX_thumb.jpg
         allImages.push({
+            type: 'image',
             thumbnail: `images/thumbnails/foto${num}_thumb.jpg`,
             fullsize: `images/fullsize/foto${num}_full.jpg`,
             alt: `Julia Nails & Beauty Design ${num}`
         });
     }
+
+    const galleryVideos = [
+        // Beispiel:
+        // {
+        //     type: 'video',
+        //     thumbnail: 'images/thumbnails/video01_thumb.jpg',
+        //     src: 'videos/video01.mp4',
+        //     mimeType: 'video/mp4',
+        //     alt: 'Julia Nails & Beauty Video 01'
+        // }
+    ];
+
+    const galleryItems = [...allImages, ...galleryVideos];
 
     // Konfiguration
     let displayedCount = 0; // Wie viele sind aktuell sichtbar
@@ -36,25 +51,35 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderImages(count) {
         const fragment = document.createDocumentFragment();
         const start = displayedCount;
-        const end = Math.min(displayedCount + count, allImages.length);
+        const end = Math.min(displayedCount + count, galleryItems.length);
 
         for (let i = start; i < end; i++) {
-            const imgData = allImages[i];
+            const item = galleryItems[i];
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'gallery-item';
+            button.dataset.index = i;
 
             // Image Element erstellen
             const img = document.createElement('img');
-            img.src = imgData.thumbnail; // Thumbnail sofort setzen
-            img.dataset.fullsize = imgData.fullsize;
-            img.dataset.index = i; // Index speichern für Lightbox
-            img.alt = imgData.alt;
+            img.src = item.thumbnail; // Thumbnail sofort setzen
+            img.alt = item.alt;
             img.classList.add('lazy-image');
 
+            if (item.type === 'video') {
+                const playBadge = document.createElement('span');
+                playBadge.className = 'gallery-play-badge';
+                playBadge.textContent = '▶';
+                button.appendChild(playBadge);
+            }
+
             // Event Listener für Lightbox
-            img.addEventListener('click', function() {
-                openLightbox(parseInt(this.dataset.index));
+            button.addEventListener('click', function() {
+                openLightbox(parseInt(this.dataset.index, 10));
             });
 
-            fragment.appendChild(img);
+            button.appendChild(img);
+            fragment.appendChild(button);
         }
 
         bilderContainer.appendChild(fragment);
@@ -64,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initLazyLoading();
 
         // Button ausblenden, wenn alle Bilder geladen sind
-        if (displayedCount >= allImages.length) {
+        if (displayedCount >= galleryItems.length) {
             mehrButton.style.display = 'none';
         }
     }
@@ -95,6 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeLightbox() {
         lightbox.style.display = 'none';
         document.body.style.overflow = 'auto';
+        lightboxVideo.pause();
+        lightboxVideo.removeAttribute('src');
+        lightboxVideo.load();
         hideLightboxLoading();
     }
 
@@ -109,18 +137,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateLightboxImage() {
-        const image = allImages[currentIndex];
+        const item = galleryItems[currentIndex];
+
+        if (item.type === 'video') {
+            lightboxImg.style.display = 'none';
+            lightboxImg.removeAttribute('src');
+            lightboxVideo.style.display = 'block';
+            lightboxVideo.src = item.src;
+            lightboxVideo.type = item.mimeType || 'video/mp4';
+            lightboxVideo.setAttribute('aria-label', item.alt);
+            hideLightboxLoading();
+            lightboxVideo.load();
+            return;
+        }
+
+        lightboxVideo.pause();
+        lightboxVideo.style.display = 'none';
+        lightboxVideo.removeAttribute('src');
+        lightboxVideo.load();
+        lightboxImg.style.display = 'block';
 
         // 1. Thumbnail als Platzhalter
-        lightboxImg.src = image.thumbnail;
-        lightboxImg.alt = image.alt;
+        lightboxImg.src = item.thumbnail;
+        lightboxImg.alt = item.alt;
         lightboxImg.classList.add('blur');
 
         // 2. Fullsize laden
         const fullsizeImage = new Image();
         fullsizeImage.onload = function() {
-            if (allImages[currentIndex].fullsize === image.fullsize) {
-                lightboxImg.src = image.fullsize;
+            if (galleryItems[currentIndex].fullsize === item.fullsize) {
+                lightboxImg.src = item.fullsize;
                 lightboxImg.classList.remove('blur');
                 lightboxImg.classList.add('sharp');
                 hideLightboxLoading();
@@ -128,22 +174,22 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         fullsizeImage.onerror = function() {
-            console.warn('Bild nicht gefunden:', image.fullsize);
+            console.warn('Bild nicht gefunden:', item.fullsize);
             hideLightboxLoading();
         };
 
-        fullsizeImage.src = image.fullsize;
+        fullsizeImage.src = item.fullsize;
     }
 
     function showNextImage(e) {
         if(e) e.stopPropagation();
-        currentIndex = (currentIndex + 1) % allImages.length;
+        currentIndex = (currentIndex + 1) % galleryItems.length;
         updateLightboxImage();
     }
 
     function showPrevImage(e) {
         if(e) e.stopPropagation();
-        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
         updateLightboxImage();
     }
 
