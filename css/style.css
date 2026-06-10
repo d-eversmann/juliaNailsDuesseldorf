@@ -31,7 +31,7 @@
 
 body {
     background: #EAE9E7;
-    background: linear-gradient(to bottom, #EAE9E7 0%, #C6C6C6 100%);
+    background: linear-gradient(rgb(234, 233, 231) 76.47%, rgb(241, 148, 131));
     color: #000;
     font-family: Baghdad, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.5;
