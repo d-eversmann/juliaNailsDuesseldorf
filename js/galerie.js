@@ -45,7 +45,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    const galleryItems = [...allImages, ...galleryVideos];
+    const imageByNumber = (number) => allImages[number - 1];
+    const galleryItems = [
+        imageByNumber(19),
+        imageByNumber(1),
+        imageByNumber(21),
+        imageByNumber(2),
+        imageByNumber(3),
+        imageByNumber(22),
+        galleryVideos[0],
+        imageByNumber(4),
+        imageByNumber(23),
+        imageByNumber(5),
+        imageByNumber(6),
+        imageByNumber(24),
+        galleryVideos[1],
+        imageByNumber(7),
+        imageByNumber(8),
+        imageByNumber(9),
+        imageByNumber(10),
+        imageByNumber(11),
+        imageByNumber(12),
+        imageByNumber(13),
+        imageByNumber(14),
+        imageByNumber(15),
+        imageByNumber(16),
+        imageByNumber(17),
+        imageByNumber(18),
+        imageByNumber(20),
+        imageByNumber(25),
+        imageByNumber(26)
+    ];
 
     // Konfiguration
     let displayedCount = 0; // Wie viele sind aktuell sichtbar
