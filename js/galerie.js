@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const mehrButton = document.getElementById('mehrBilderBtn');
     const bilderContainer = document.querySelector('.bilder');
 
-    // 1. Array mit allen 27 Bildern automatisch generieren
+    // 1. Array mit allen 26 Bildern automatisch generieren
     const allImages = [];
-    const totalImages = 27;
+    const totalImages = 26;
 
     for (let i = 1; i <= totalImages; i++) {
         // Zahl mit führender Null formatieren (1 -> "01", 10 -> "10")
@@ -29,14 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const galleryVideos = [
-        // Beispiel:
-        // {
-        //     type: 'video',
-        //     thumbnail: 'images/thumbnails/video01_thumb.jpg',
-        //     src: 'videos/video01.mp4',
-        //     mimeType: 'video/mp4',
-        //     alt: 'Julia Nails & Beauty Video 01'
-        // }
+        {
+            type: 'video',
+            thumbnail: 'images/thumbnails/video01_thumb.jpg',
+            src: 'videos/video01.mp4',
+            mimeType: 'video/mp4',
+            alt: 'Julia Nails & Beauty Video 01'
+        },
+        {
+            type: 'video',
+            thumbnail: 'images/thumbnails/video02_thumb.jpg',
+            src: 'videos/video02.mp4',
+            mimeType: 'video/mp4',
+            alt: 'Julia Nails & Beauty Video 02'
+        }
     ];
 
     const galleryItems = [...allImages, ...galleryVideos];
