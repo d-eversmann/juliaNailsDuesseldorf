@@ -1335,13 +1335,14 @@ body.rechtliche-seite main {
 }
 
 .preis-table-three {
-    grid-template-columns: minmax(120px, 1fr) 72px 72px;
-    gap: 10px 14px;
+    grid-template-columns: minmax(112px, 1fr) 100px 78px;
+    gap: 10px 12px;
 }
 
 .preis-table strong {
     font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-size: 0.62em;
+    font-size: 0.64rem;
+    line-height: 1.1;
     text-align: center;
     text-transform: uppercase;
 }
@@ -1373,8 +1374,8 @@ body.rechtliche-seite main {
 
 .preis-with-circle {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(96px, 11vw, 124px);
-    gap: 18px 22px;
+    grid-template-columns: minmax(0, 1fr) clamp(58px, 6vw, 82px);
+    gap: 16px 18px;
     align-items: center;
     min-height: 0;
 }
@@ -1400,7 +1401,8 @@ body.rechtliche-seite main {
     border-radius: 50%;
     border: 0;
     background: transparent;
-    box-shadow: 0 8px 20px rgba(63, 34, 16, 0.18);
+    box-shadow: 0 6px 16px rgba(63, 34, 16, 0.16);
+    clip-path: circle(47% at 50% 50%);
 }
 
 .preis-circle-acryl {
@@ -1589,13 +1591,13 @@ body.rechtliche-seite main {
     }
 
     .preis-table-three {
-        grid-template-columns: minmax(0, 1fr) 58px 58px;
+        grid-template-columns: minmax(0, 1fr) 88px 74px;
         gap: 10px 10px;
-        font-size: 0.98rem;
+        font-size: 0.92rem;
     }
 
     .preis-table strong {
-        font-size: 0.68rem;
+        font-size: 0.58rem;
     }
 
     .preis-list {
@@ -1619,7 +1621,7 @@ body.rechtliche-seite main {
 
     .preis-circle {
         grid-row: auto;
-        width: min(58vw, 180px);
+        width: min(34vw, 120px);
         justify-self: center;
     }
 
