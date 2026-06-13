@@ -1222,11 +1222,20 @@ body.rechtliche-seite main {
     --preis-brown: #633417;
     --preis-ink: #120d09;
     max-width: 950px;
+    box-sizing: border-box;
+    overflow: hidden;
     background:
         radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.96), transparent 34%),
         radial-gradient(circle at 84% 17%, rgba(232, 205, 150, 0.26), transparent 30%),
         linear-gradient(135deg, #fdfbf7 0%, #fffefa 43%, #f3ecdf 100%);
     border-radius: 6px;
+}
+
+.preis-gemini *,
+.preis-gemini *::before,
+.preis-gemini *::after {
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 .preis-poster-title,
@@ -1617,6 +1626,74 @@ body.rechtliche-seite main {
     .preis-lash-images img {
         max-width: 260px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .preis-poster.preis-gemini {
+        width: calc(100% - 12px);
+        padding: 18px 10px;
+        margin-inline: auto;
+    }
+
+    .preis-poster-title {
+        font-size: clamp(2.3rem, 15vw, 3.1rem);
+        margin-bottom: 26px;
+    }
+
+    .preis-category h3,
+    .preis-category h4 {
+        font-size: 1.2rem;
+    }
+
+    .preis-gold-heading,
+    .preis-gold-box h3,
+    .preis-gold-box h4 {
+        padding-inline: 8px;
+        font-size: 1.7rem;
+    }
+
+    .preis-table-three {
+        grid-template-columns: minmax(0, 1fr) 74px 62px;
+        gap: 9px 6px;
+        font-size: 0.86rem;
+    }
+
+    .preis-table strong {
+        font-size: 0.5rem;
+        letter-spacing: 0.02em;
+    }
+
+    .preis-list {
+        font-size: 0.9rem;
+    }
+
+    .preis-list li {
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 6px;
+        padding-left: 16px;
+    }
+
+    .preis-circle {
+        width: min(30vw, 96px);
+    }
+
+    .preis-lash-header {
+        gap: 12px;
+    }
+
+    .preis-lash-header h3 {
+        font-size: clamp(2.05rem, 13vw, 2.8rem);
+    }
+
+    .preis-lash-header span {
+        min-height: 34px;
+        padding: 6px 12px;
+        font-size: 1rem;
+    }
+
+    .preis-lash-list {
+        font-size: 0.86rem;
     }
 }
 
