@@ -540,6 +540,15 @@ body.rechtliche-seite main {
     text-underline-offset: 3px;
 }
 
+.team-cta .booking-link {
+    margin-top: 1rem;
+}
+
+.team-cta-secondary {
+    margin-top: 1rem;
+    color: #555;
+}
+
 /*!* PREISLISTE *!*/
 /*body.preisliste-seite .preise {*/
 /*    max-width: 1000px;*/
@@ -1783,6 +1792,30 @@ body.rechtliche-seite main {
     color: white;
 }
 
+.booking-link,
+.booking-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    background: linear-gradient(135deg, #c89b42 0%, #f2df9f 52%, #a27632 100%);
+    color: #1f140c;
+    border: 1px solid rgba(120, 78, 30, 0.35);
+    border-radius: 999px;
+    padding: 0.8rem 1.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(120, 78, 30, 0.14);
+}
+
+.booking-link:hover,
+.booking-button:hover {
+    background: linear-gradient(135deg, #b98c36 0%, #f6e7b5 52%, #95682c 100%);
+    color: #1f140c;
+    transform: translateY(-2px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .preise-grid {
@@ -1819,6 +1852,11 @@ body.rechtliche-seite main {
         width: 100%;
         max-width: 200px;
         text-align: center;
+    }
+
+    .booking-link,
+    .booking-button {
+        width: min(100%, 300px);
     }
 }
 
@@ -1887,6 +1925,11 @@ body.rechtliche-seite main {
     text-decoration: none;
     display: inline-block;
     margin-top: 0.25rem;
+}
+
+.contact-link.booking-link {
+    color: #1f140c;
+    margin-top: 0.4rem;
 }
 
 .contact-link:hover {
